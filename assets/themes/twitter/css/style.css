@@ -4,7 +4,7 @@ body{
 	color: #353B40;
 	margin: 0;
 	padding: 0;
-	font-size: 1.3em;
+	font-size: 1.1em;
 }
 
 .mainbody p{
@@ -22,3 +22,10 @@ margin-top:25px;
 text-transform: uppercase;
 text-shadow: 0;
 }
+
+.navbar .navbar-inner .nav .now a{
+	border-color:#6E9721;
+	color:#6E9721;
+}
+
+
