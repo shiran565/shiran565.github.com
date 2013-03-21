@@ -1,10 +1,10 @@
 body{
-	font-family: Rockwell, Verdana, sans-serif;
+	font-family: Rockwell, Verdana, "\5FAE\8F6F\96C5\9ED1",sans-serif;
 	letter-spacing: 0em;
 	color: #353B40;
 	margin: 0;
 	padding: 0;
-	font-size: 1.3em;
+	font-size: 1.1em;
 }
 
 .mainbody p{
@@ -22,3 +22,44 @@ margin-top:25px;
 text-transform: uppercase;
 text-shadow: 0;
 }
+
+.navbar .navbar-inner .nav .now a{
+	border-color:#6E9721;
+	color:#6E9721;
+}
+
+.main-container .mainbody > h2 {
+  background: #6e9b20 url(/assets/themes/twitter/bootstrap/img/green_gradient.gif) repeat-x bottom;
+  padding: 0.1em 0.5em;
+  border-bottom: 2px solid #262;
+  margin-bottom: 0.6em;
+  color: white;
+  font-weight: normal;
+  -moz-border-radius-topleft: 8px;
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  -webkit-border-top-right-radius: 8px;  
+  -moz-box-shadow: 1px 0px 5px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 1px 0 5px rgba(0,0,0,0.5);
+  box-shadow: 1px 0 5px rgba(0,0,0,0.5);
+}
+
+.main-container .mainbody > h2  a{
+  color: white;
+  font-size:0.8em;
+  font-weight: normal;
+}
+
+/*
+.post_at_index h2{
+  text-decoration: none;  clear: left;  display: block;  color: black;
+  padding: 0.1em 0.5em;  margin: 0 0 0.2em 0;
+  font-weight: bold; font-size:1.2em;
+  background: #f8f8f8 url(/assets/themes/twitter/bootstrap/img/header_gradient.gif) repeat-x bottom;
+  -moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+  font-weight: normal;
+  color: #000;
+  z-index: 10000;
+}*/

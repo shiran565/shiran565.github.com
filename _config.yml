@@ -1,11 +1,13 @@
 ﻿# This is the default format. 
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
 # 定义文章的最终访问链接
-permalink: /:categories/:year/:month/:day/:title 
+permalink: /:year/:month/:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
-pygments: true
+pygments: false
+paginate: 6
+description_length: 200
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
@@ -82,7 +84,7 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : duoshuo
+    provider : disqus
     disqus :
       short_name : shiran565
     livefyre :
