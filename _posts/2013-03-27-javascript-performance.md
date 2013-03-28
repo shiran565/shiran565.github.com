@@ -75,34 +75,54 @@ Javascript是一门非常灵活的语言，我们可以随心所欲的书写各�
 
 ##Js操作dom的效率
 ###1、减少reflow
-+ 什么是reflow？
+####什么是reflow？
 
 >当 DOM 元素的属性发生变化 (如 color) 时, 浏览器会通知 render 重新描绘相应的元素, 此过程称为 repaint。
-如果该次变化涉及元素布局 (如 width), 浏览器则抛弃原有属性, 重新计算并把结果传递给 render 以重新描绘页面元素, 此过程称为 reflow。
+>
+>如果该次变化涉及元素布局 (如 width), 浏览器则抛弃原有属性, 重新计算并把结果传递给 render 以重新描绘页面元素, 此过程称为 reflow。
 
-+ 减少reflow的方法
-
+####减少reflow的方法
 
 1. 先将元素从document中删除，完成修改后再把元素放回原来的位置
+
 2. 将元素的display设置为”none”，完成修改后再把display修改为原来的值
+
 3. 大量添加元素到页面时使用documentFragment
 
-	    for(var i=0;i<100:i++){
-	    	var child = docuemnt.createElement("li");
-	    	child.innerHtml = "child";
-	    	document.getElementById("parent").appendChild(child);
-	    }
+例如
 
 
+	for(var i=0;i<100:i++){
+		var child = docuemnt.createElement("li");
+		child.innerHtml = "child";
+		document.getElementById("parent").appendChild(child);
+	}
+	
 	上述代码会多次操作dom，效率比较低，可以改为下面的形式
 	
-		//创建documentFragment，将所有元素加入到docuemntFragment不会改变dom结构，最终一次性将其加入页面即可
-		
-		var frag = document.createDocumentFragment();
-		for(var i=0;i<100:i++){
-		    	var child = docuemnt.createElement("li");
-		    	child.innerHtml = "child";
-	    		frag.appendChild(child);
-	      }
-	      document.getElementById("parent").appendChild(frag);
+	//创建documentFragment，将所有元素加入到docuemntFragment不会改变dom结构，最后将其添加到页面，只进行了一次reflow
+	
+	var frag = document.createDocumentFragment();
+	for(var i=0;i<100:i++){
+	    	var child = docuemnt.createElement("li");
+	    	child.innerHtml = "child";
+		frag.appendChild(child);
+	}
+	document.getElementById("parent").appendChild(frag);
+	      
+###2、暂存dom状态信息
+
+当代码中需要多次访问元素的状态信息，在状态不变的情况下我们可以将其暂存到变量中，这样可以避免多次访问dom带来内存的开销，典型的例子就是：
+
+    var lis = document.getElementByTagName("li");
+    for(var i=1;i<lis.length;i++){
+    	//***
+    }
+    上述方式会在每一次循环都去访问dom元素，我们可以简单将代码优化如下
+    var lis = document.getElementByTagName("li");
+    for(var i=1,j=lis.length ;i<j;i++){
+    	//***
+    }
+
+###3、缩小选择器的查找范围
 
