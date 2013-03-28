@@ -1,3 +1,5 @@
+html{height:101%;}
+
 body{
 	font-family: Rockwell, Verdana, "\5FAE\8F6F\96C5\9ED1";
 	color: #353B40;
@@ -6,12 +8,19 @@ body{
 	font-size: 1.1em;
 }
 
+#logo{
+	display:block;
+	background:url(/assets/themes/twitter/img/logo.JPG) no-repeat top left;
+	text-indent:-9999em;
+	width:232px;height:54px;
+}
+
 .post_at_index > p,.post-content > p{
 	letter-spacing: 0.1em;
 	line-height:160%;
 	text-indent: 2em; /*em是相对单位，2em即现在一个字大小的两倍*/
 }
-
+/*导航栏*/
 .navbar .navbar-inner .nav .actions a {
 border: 2px solid #ddd;
 padding: 5px;
@@ -41,27 +50,32 @@ text-shadow: 0;
   -webkit-border-top-left-radius: 8px;
   -moz-border-radius-topright: 8px;
   -webkit-border-top-right-radius: 8px;  
-  -moz-box-shadow: 1px 0px 5px rgba(0,0,0,0.5);
-  -webkit-box-shadow: 1px 0 5px rgba(0,0,0,0.5);
   box-shadow: 1px 0 5px rgba(0,0,0,0.5);
 }
 
+/*博文中的标题*/
 .main-container .mainbody > h2  a{
   color: white;
   font-size:0.8em;
   font-weight: normal;
 }
 
+.main-container .mainbody .blog-info{
+	font-size:0.9em;
+	text-align:right;
+}
 
 .post_at_index h2 ,.post-content h2{
   text-decoration: none;  clear: left;  display: block;  color: black;
   padding: 0.1em 0.5em;  margin: 0 0 0.3em 0;
   font-weight: bold; font-size:1.2em;
   background: #f8f8f8 url(/assets/themes/twitter/bootstrap/img/header_gradient.gif) repeat-x bottom;
-  -moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
-  -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
   box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
   font-weight: normal;
   color: #000;
   z-index: 10000;
+}
+#recent-blog ul {margin:0 0 5px;}
+#recent-blog ul li{
+	list-style:none; clear: left;padding:2px;
 }
