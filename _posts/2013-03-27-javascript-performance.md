@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Javascript执行效率问题小结"
+title: "Javascript执行效率小结"
 description: ""
 tagline: ""
 category: "performance"
