@@ -5,7 +5,7 @@ body{
 	color: #353B40;
 	margin: 0;
 	padding: 0;
-	font-size: 1.1em;
+	font-size: 1.0em;
 }
 
 #logo{
@@ -17,20 +17,20 @@ body{
 
 .post_at_index > p,.post-content > p{
 	letter-spacing: 0.11em;
-	line-height:160%;
+	line-height:150%;
 	text-indent: 2em; /*em是相对单位，2em即现在一个字大小的两倍*/
 }
 /*导航栏*/
 .navbar .navbar-inner .nav .actions a {
-border: 2px solid #ddd;
-padding: 5px;
-font-family:consolas;
-font-size:15px;
-border-radius: 4px;
-margin-left: 20px;
-margin-top:25px;
-text-transform: uppercase;
-text-shadow: 0;
+  border: 2px solid #ddd;
+  padding: 5px;
+  font-family:consolas;
+  font-size:15px;
+  border-radius: 4px;
+  margin-left: 20px;
+  margin-top:25px;
+  text-transform: uppercase;
+  text-shadow: 0;
 }
 
 .navbar .navbar-inner .nav .now a{
@@ -42,7 +42,7 @@ text-shadow: 0;
 .main-container .mainbody > h2 {
   /*background: #6e9b20 url(/assets/themes/twitter/bootstrap/img/green_gradient.gif) repeat-x bottom;*/
   background:#e7e6dc;
-  padding: 0.1em 0.5em;
+  padding: 0.1em 0.3em;
   /*border-bottom: 2px solid #262;*/
   margin-bottom: 0.6em;
   border-radius: 8px;
