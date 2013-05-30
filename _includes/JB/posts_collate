@@ -28,10 +28,10 @@ Usage:
   
     {% if forloop.first %}
         <div class="row">
-            <div class="span1 offset1">
+            <div class="yearContainer span1 offset1">
                 <h3 class="titleYear label label-success"><span class="icon-tags icon-white"></span>&nbsp;{{this_year }}</h3>
             </div>
-            <div class="span9 offset1">
+            <div class="span9">
               <h4 class="titleMonth"><span class="badge">{{this_month}}</span></h4>
               <ul class="titleList">
     {% endif %}
@@ -48,10 +48,10 @@ Usage:
         </div>
         </div>
         <div class="row">
-            <div class="span1 offset1">
+            <div class="yearContainer span1 offset1">
                 <h3 class="titleYear label label-success"><span class="icon-tags icon-white"></span>&nbsp;{{next_year}}</h3>
             </div>
-            <div class="span9 offset1">
+            <div class="span9">
                 <h4 class="titleMonth"><span class="badge">{{next_month}}</span></h4>
                 <ul class="titleList">
       {% else %}    
