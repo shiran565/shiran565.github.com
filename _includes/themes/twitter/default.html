@@ -15,6 +15,9 @@
     <!-- Le styles -->
     <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+      {% if page.cssPath%}
+    <link href="{{ BASE_PATH }}{{page.cssPath}}" rel="stylesheet" type="text/css" media="all">
+      {% endif %}
 
     <!-- atom & rss feed -->
     <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
@@ -23,44 +26,41 @@
   </head>
 
   <body>
-            <nav class="navbar">
-              <div class="navbar-inner">
-                <div class="container">
-				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				  </a>
-                  <h1  class="brand" ><a id="logo"href="{{ HOME_PATH }}">{{site.title}}</a></h1>
-                  <div class="nav-collapse">
-                    <ul class="nav pull-right">
-					  <li class="actions {% if page.url == "/index.html"%}now{%endif%} " ><a href="/">Home</a></li>
-                      {% assign pages_list = site.pages %}
-                      {% assign group = 'navigation' %}
-                      {% include JB/pages_list %}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </nav>
-
+    <nav class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <h1  class="brand" ><a id="logo"href="{{ HOME_PATH }}">{{site.title}}</a></h1>
+          <div class="nav-collapse">
+            <ul class="nav pull-right">
+              <li class="actions {% if page.url == "/index.html"%}now{%endif%} " ><a href="/">Home</a></li>
+              {% assign pages_list = site.pages %}
+              {% assign group = 'navigation' %}
+              {% include JB/pages_list %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
 
     <div class="container">
       <div class="row">
-        <div class="span9">
+        <div class="span8">
           <div class="content">
             {{ content }}
           </div>
         </div>
 
-        <aside class="span3">
+        <aside class="span4">
 
             <section id="recent-blog" class="content">
-              <h2>{{page.asideTitle}}</h2>
+              <h3>AboutMe{{page.asideTitle}}</h3>
               <ul>
-                {% for post in site.posts %}
-                  <li><span><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-                {% endfor %}
+                  <li>Name:</li>
               </ul>
 
             </section>          
@@ -78,5 +78,11 @@
     </div>
 
     {% include JB/analytics %}
+    <script type="text/javascript" src="{{ BASE_PATH }}/assets/js/jquery-1.7.1.js"></script>
+
+    {% if page.jsPath%}
+    <script type="text/javascript" src="{{ BASE_PATH }}{{page.jsPath}}" ></script>
+    {% endif %}
+
   </body>
 </html>
