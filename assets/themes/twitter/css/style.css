@@ -1,11 +1,22 @@
 html{height:101%;}
 
 body{
-	font-family: Rockwell, Verdana, "\5FAE\8F6F\96C5\9ED1";
-	color: #353B40;
-	margin: 0;
-	padding: 0;
-	font-size: 1.0em;
+    font-family: Rockwell, Verdana, "\5FAE\8F6F\96C5\9ED1";
+    margin: 0;
+    padding: 0;
+    font-size: 1.0em;
+    background-color: #79c3d2;
+
+}
+
+.span9 > .content{
+    color: #143352;
+    border-color: transparent;
+    border-top: 2px solid #9fd5df;
+    background-color: #d9eef2;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
 }
 
 #logo{
@@ -66,6 +77,16 @@ body{
 	font-size:0.9em;
 	text-align:right;
 }
+
+/*代码框*/
+.post-content pre{
+    color: #1f4c7a;
+    background-color: #ffffff;
+    border:dashed 2px #d9eef2;
+    padding: 15px;
+    margin: 15px 0;
+}
+
 
 .post_at_index h2 ,.post-content h2{
   text-decoration: none;  clear: left;  display: block;  color: black;
