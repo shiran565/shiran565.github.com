@@ -6,7 +6,6 @@ tagline: ""
 category: "performance"
 tags: [Javascript,性能,效率]
 ---
-{% include JB/setup %}
 
 Javascript是一门非常灵活的语言，我们可以随心所欲的书写各种风格的代码，不同风格的代码也必然也会导致执行效率的差异，开发过程中零零散散地接触到许多提高代码性能的方法，整理一下平时比较常见并且容易规避的问题
 

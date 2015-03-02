@@ -1,0 +1,28 @@
+# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
+
+paginate: 10 # pagination based on number of posts
+paginate_path: "page:num"
+highlighter: true
+markdown: kramdown
+
+
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      title: eRealm Info & Tech
+
+description: eRealm Info & Tech
+author:
+  name: 释然
+  email: gewei565@gmail.com 
+  github: gewei565
+  weibo: gewei565
+  bio: 优秀是一种习惯
+  email_md5: d7500acdff95da1b6a98acac373cae8b
+rss_path: feed.xml
+categories_path: categories.html
+tags_path: tags.html
+
+BASE_PATH:

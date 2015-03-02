@@ -6,7 +6,6 @@ tagline: "Logic Operation In Python"
 category: "经验总结"
 tags: [jekyll,jekyll搭建,github pages]
 ---
-{% include JB/setup %}
 
 ##背景知识
 ###*GitHub Pages*是什么？
